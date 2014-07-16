@@ -1,0 +1,9 @@
+OVERVIEW
+
+This is a clone of the official [python-suds](https://pypi.python.org/pypi/suds) library, with the [recommended patch](https://fedorahosted.org/suds/ticket/353) for timezone discrepencies. 
+
+For details, visit:
+
+  * Project site: https://fedorahosted.org/suds/
+  * Documentation: https://fedorahosted.org/suds/wiki/Documentation
+  * Epydocs: http://jortel.fedorapeople.org/suds/doc/
