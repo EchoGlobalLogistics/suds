@@ -97,7 +97,8 @@ class Builder:
         for attr, ancestry in type.attributes():
             name = '_%s' % attr.name
             value = attr.get_default()
-            setattr(data, name, value)
+            if value or not (attr.use and attr.use == 'optional'):
+                setattr(data, name, value)
                 
     def skip_child(self, child, ancestry):
         """ get whether or not to skip the specified child """

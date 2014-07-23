@@ -191,7 +191,7 @@ class PrimativeAppender(Appender):
         if content.tag.startswith('_'):
             attr = content.tag[1:]
             value = tostr(content.value)
-            if value:
+            if value is not None:
                 parent.set(attr, value)
         else:
             child = self.node(content)

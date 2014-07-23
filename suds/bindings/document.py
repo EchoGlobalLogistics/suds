@@ -57,8 +57,10 @@ class Document(Binding):
         for pd in self.param_defs(method):
             if n < len(args):
                 value = args[n]
-            else:
+            elif kwargs.has_key(pd[0]):
                 value = kwargs.get(pd[0])
+            else:
+                continue
             n += 1
             p = self.mkparam(method, pd, value)
             if p is None:

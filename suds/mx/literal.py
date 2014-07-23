@@ -209,7 +209,7 @@ class Typed(Core):
         """
         if self.optional(content):
             v = content.value
-            if v is None:
+            if v is None and not content.type.nillable:
                 return True
             if isinstance(v, (list,tuple)) and len(v) == 0:
                 return True

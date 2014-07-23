@@ -93,10 +93,7 @@ class Core:
         if content.node.isnil():
             return None
         if not len(node.children) and content.text is None:
-            if self.nillable(content):
-                return None
-            else:
-                return Text('', lang=lang)
+            return Text('', lang=lang)
         if isinstance(content.text, basestring):
             return Text(content.text, lang=lang)
         else:

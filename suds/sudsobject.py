@@ -80,7 +80,7 @@ def footprint(sobject):
         if isinstance(v, Object):
             n += footprint(v)
             continue
-        if hasattr(v, '__len__'):
+        if isinstance(v, (list,tuple)):
             if len(v): n += 1
             continue
         n +=1
